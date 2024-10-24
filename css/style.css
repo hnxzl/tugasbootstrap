@@ -1,0 +1,22 @@
+body {
+    background-color: #d9e4ee;
+  }
+  
+  .navbar {
+    background-color: #a2d2ff !important;
+  }
+  
+  .btn-primary {
+    background-color: #7c4158;
+    border-color: #ad3664;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ffafcc;
+    border-color: #ffafcc;
+  }
+  
+  h1, p {
+    color: #cdb4db;
+  }
+  
