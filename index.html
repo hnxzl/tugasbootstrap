@@ -40,6 +40,14 @@
         </div>
     </div>
 </div>
+<script>
+    function loginUser(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      localStorage.setItem('userEmail', email);
+      window.location.href = 'dashboard.html';
+    }
+  </script>
 
 </body>
 </html>
