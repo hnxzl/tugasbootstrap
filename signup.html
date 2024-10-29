@@ -1,70 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <style>
-    .toggle-password {
-      position: absolute;
-      right: 10px;
-      top: 35px;
-      cursor: pointer;
-      height: 100%;
-      aspect-ratio: 1;
-      object-fit: contain;
-    }
-  </style>
-</head>
-<body>
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <h3 class="text-center">Sign Up</h3>
-        <form id="signupForm">
-          <div class="mb-3">
-            <label for="name" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter name" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
-          </div>
-          <div class="mb-3 position-relative">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password" required>
-            <img src="asset/eye.jpg" alt="Toggle Password" class="toggle-password" onclick="togglePassword('password')">
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Sign Up</button>
-          <div class="mb-3"><center><p>Already have an account? <a href="login.html">Login</a></p></center></div>
-        </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+      .toggle-password {
+        position: absolute;
+        right: 10px;
+        top: 35px;
+        cursor: pointer;
+        height: 100%;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <h3 class="text-center">Sign Up</h3>
+          <form id="signupForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter email"
+                required
+              />
+            </div>
+            <div class="mb-3 position-relative">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Password"
+                required
+              />
+              <img
+                src="asset/eye.jpg"
+                alt="Toggle Password"
+                class="toggle-password"
+                onclick="togglePassword('password')"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+            <div class="mb-3">
+              <center>
+                <p>Already have an account? <a href="login.html">Login</a></p>
+              </center>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    function togglePassword(inputId) {
-      const passwordField = document.getElementById(inputId);
-      if (passwordField.type === "password") {
-        passwordField.type = "text";
-      } else {
-        passwordField.type = "password";
+    <script>
+      function togglePassword(inputId) {
+        const passwordField = document.getElementById(inputId);
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+        } else {
+          passwordField.type = "password";
+        }
       }
-    }
 
-    document.getElementById('signupForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      
-      localStorage.setItem('userData', JSON.stringify({ name, email, password }));
-      alert('Akunmu berhasil di daftarkan! Silahkan login');
-      window.location.href = 'login.html';
-    });
-  </script>
-</body>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          localStorage.setItem(
+            "userData",
+            JSON.stringify({ name, email, password })
+          );
+          alert("Akunmu berhasil di daftarkan! Silahkan login");
+          window.location.href = "login.html";
+        });
+    </script>
+  </body>
 </html>

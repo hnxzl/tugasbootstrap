@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>start page</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>start page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
         <a class="navbar-brand" href="index.html">TODODO</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Sign In</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="signup.html">Sign Up</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup.html">Sign Up</a>
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<div class="container mt-5">
-    <div class="row align-items-center">
+    <div class="container mt-5">
+      <div class="row align-items-center">
         <div class="col-md-6">
-            <h1>TODODO</h1>
-            <p>Tododo adalah sebuah website untuk mengatur dan membantu anda dalam mengelola semua tugas maupun pekerjaanmu dengan rapih</p>
-            <a href="login.html" class="btn btn-primary">Let's Go</a>
+          <h1>TODODO</h1>
+          <p>
+            Tododo adalah sebuah website untuk mengatur dan membantu anda dalam
+            mengelola semua tugas maupun pekerjaanmu dengan rapih
+          </p>
+          <a href="login.html" class="btn btn-primary">Let's Go</a>
         </div>
         <div class="col-md-6">
-            <img src="image/tododo-logo.png" alt="Hero Image" class="img-fluid">
+          <img src="image/tododo-logo.png" alt="Hero Image" class="img-fluid" />
         </div>
+      </div>
     </div>
-</div>
-<script>
-    function loginUser(event) {
-      event.preventDefault();
-      const email = document.getElementById('email').value;
-      localStorage.setItem('userEmail', email);
-      window.location.href = 'dashboard.html';
-    }
-  </script>
-
-</body>
+    <script>
+      function loginUser(event) {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        localStorage.setItem("userEmail", email);
+        window.location.href = "dashboard.html";
+      }
+    </script>
+  </body>
 </html>
